@@ -17,7 +17,6 @@ set_seed(20251203)
 # ============ 2. 配置参数 ============
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 HIDDEN_DIM = 512  # 与训练时一致
-MLP_HIDDEN_DIM = 512
 DROPOUT_RATE = 0.2
 N_FOLDS = 10
 
@@ -30,9 +29,9 @@ print(f"使用设备: {DEVICE}")
 def main():
     # -------- 3.1 加载测试数据 --------
     print("\n[1/4] 加载测试数据...")
-    img_test = np.load("test/image_features.npy")
-    txt_test = np.load("test/text_features.npy")
-    vid_test = np.load("test/video_features.npy")
+    img_test = np.load("Data/test/image_features.npy")
+    txt_test = np.load("Data/test/text_features.npy")
+    vid_test = np.load("Data/test/video_features.npy")
     
     print(f"  图像特征: {img_test.shape}")
     print(f"  文本特征: {txt_test.shape}")
@@ -121,7 +120,7 @@ def main():
     final_predictions = y_scaler.inverse_transform(avg_pred_scaled)
     
     # 保存预测结果
-    output_file = "predictions_improved.npy"
+    output_file = "predictions.npy"
     np.save(output_file, final_predictions)
     
     print(f"\n✓ 预测完成!")

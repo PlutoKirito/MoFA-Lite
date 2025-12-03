@@ -150,10 +150,10 @@ class MultiModalPredictor(nn.Module):
 def main():
     # -------- 5.1 数据加载 --------
     print("\n[1/5] 加载数据...")
-    img = np.load("train/image_features.npy")
-    txt = np.load("train/text_features.npy")
-    vid = np.load("train/video_features.npy")
-    pop = np.load("train/popularity_counts.npy")
+    img = np.load("Data/train/image_features.npy")
+    txt = np.load("Data/train/text_features.npy")
+    vid = np.load("Data/train/video_features.npy")
+    pop = np.load("Data/train/popularity_counts.npy")
     
     print(f"  图像特征: {img.shape}")
     print(f"  文本特征: {txt.shape}")
