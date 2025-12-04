@@ -19,6 +19,8 @@ The objective is to predict the popularity (views, likes, comments) of micro-vid
     *   `video_features` (768-dim): Motion/Content features extracted using [**VideoMAE**](http://arxiv.org/abs/2203.12602).
     *   `text_features` (1024-dim): Semantic features extracted from descriptions using [**BGE-M3**](http://arxiv.org/abs/2402.03216).
 
+> **Acknowledgement**: All data sources were provided by the team of the course instructor, [Prof. Chen](https://zhenzhong-chen.github.io/), and are intended solely for the final course examination.
+
 **MoFA-Lite** tackles this by employing a **Lightweight Modality-Focused Attention** mechanism that dynamically weighs the importance of different modalities before fusing them for prediction.
 
 Unlike traditional heavy-weight transformers, MoFA-Lite is designed to be agile yet powerful, leveraging a **Single-Model Multi-Output** strategy combined with **10-Fold Cross-Validation Ensemble** to achieve state-of-the-art stability and accuracy.
