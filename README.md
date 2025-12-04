@@ -21,9 +21,7 @@ The objective is to predict the popularity (views, likes, comments) of micro-vid
 
 > **Acknowledgement**: All data sources were provided by the team of the course instructor, [Prof. Chen](https://zhenzhong-chen.github.io/), and are intended solely for the final course examination.
 
-**MoFA-Lite** tackles this by employing a **Lightweight Modality-Focused Attention** mechanism that dynamically weighs the importance of different modalities before fusing them for prediction.
-
-Unlike traditional heavy-weight transformers, MoFA-Lite is designed to be agile yet powerful, leveraging a **Single-Model Multi-Output** strategy combined with **10-Fold Cross-Validation Ensemble** to achieve state-of-the-art stability and accuracy.
+**MoFA-Lite** tackles this by employing a **Lightweight Modality-Focused Attention** mechanism that dynamically weighs the importance of different modalities before fusing them for prediction, is designed to  leverage a **Single-Model Multi-Output** strategy combined with **K-Fold Cross-Validation Ensemble** to achieve not bad stability and accuracy.
 
 ## 📊 Performance & Leaderboard
 
@@ -130,7 +128,7 @@ python Feature_Analysis.py
 ```
 > **Acknowledgement**: Special thanks to [**Peng Wang**](https://github.com/Unijockey) for his valuable insights into the input feature characteristics, which significantly guided our preprocessing strategy and led to substantial performance improvements.
 ### 2. Training
-Run the training script to start the 10-Fold Cross-Validation process. This will train 10 separate models and save the best weights for each fold.
+Run the training script to start the K-Fold Cross-Validation process. This will train 10 separate models and save the best weights for each fold.
 
 ```bash
 python train.py
